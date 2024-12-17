@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#endorsements" class="nav-link">Endorsements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="section">
+        <div class="home-content">
+            <div class="intro">
+                <h1>Welcome to My Portfolio</h1>
+                <p><span>Hi, I'm Tanav Jalan!</span></p>
+                <p>I am an organized and dedicated candidate, successful at managing multiple priorities with a positive attitude. I have the willingness to take on added responsibilities to meet team goals. Currently, I am a Senior at ASU contributing to team success through dedication, detail-oriented, and effective communication. Definitely, motivated to learn, grow, and excel both as a human being and as a professional. I am able to work with minimal input to produce engaging, authoritative and error-free work. Finally, I would like to add that I am a hardworking and passionate job seeker with strong organizational skills eager to secure a job.</p>
+            </div>
+            <div class="profile-pic">
+                <img src="images/profile.jpg" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="resume-btn">
+            <a href="docs/resume.pdf" download="YourName_Resume" class="download-btn">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <p>Details about your educational background go here.</p>
+    </section>
+
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <p>List your certifications here.</p>
+    </section>
+
+    <section id="awards" class="section">
+        <h2>Awards</h2>
+        <p>Highlight any awards you've earned.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <p>Outline your technical and professional skills.</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <p>Share your professional experience.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Showcase some of your best projects.</p>
+    </section>
+
+    <section id="endorsements" class="section">
+        <h2>Endorsements</h2>
+        <p>Share endorsements or recommendations.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Include your contact information.</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active section in nav bar
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

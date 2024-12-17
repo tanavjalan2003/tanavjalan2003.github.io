@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #1B122B;
+    color: #F3E5D8;
+}
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #3A1C56;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar ul li {
+    margin: 0 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #F3E5D8;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    color: #FF6F61;
+    transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    padding: 4rem 10%;
+    text-align: left;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 10%;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    color: #FF6F61;
+}
+
+.intro p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #F3E5D8;
+}
+
+.intro span {
+    color: #FF6F61;
+    font-weight: bold;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #FF6F61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1);
+}
+
+/* Download Resume Button */
+.resume-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.download-btn {
+    text-decoration: none;
+    color: #1B122B;
+    background: #FF6F61;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #F3E5D8;
+    transform: scale(1.1);
+    color: #3A1C56;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #FF6F61;
+}
