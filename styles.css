@@ -83,8 +83,8 @@ header {
 }
 
 .profile-pic img {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     border: 5px solid #FF6F61;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
