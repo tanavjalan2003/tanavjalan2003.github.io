@@ -183,4 +183,144 @@ h2 {
     margin: 0.2rem 0;
 }
 
+/* Certifications Section */
+.certification-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
 
+.certification-box {
+    background: #2A1A3D;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #F3E5D8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.certification-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.cert-badge {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    animation: zoomIn 1s ease;
+}
+
+.cert-details h3 {
+    font-size: 1.4rem;
+    color: #FF6F61;
+    margin-bottom: 0.5rem;
+}
+
+.cert-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cert-details li {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+.cert-details a {
+    color: #FF6F61;
+    text-decoration: none;
+}
+
+.cert-details a:hover {
+    text-decoration: underline;
+}
+
+/* Awards Section */
+.award-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.award-box {
+    background: #2A1A3D;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #F3E5D8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.award-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.award-details h3 {
+    font-size: 1.4rem;
+    color: #FF6F61;
+    margin-bottom: 0.5rem;
+}
+
+.award-item {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.award-item h4 {
+    font-size: 1.2rem;
+    color: #F3E5D8;
+    margin-bottom: 0.5rem;
+}
+
+.award-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.download-btn {
+    padding: 0.5rem 1rem;
+    background-color: #FF6F61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #FF4E3A;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
