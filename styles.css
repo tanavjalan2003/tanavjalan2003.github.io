@@ -4,125 +4,195 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background: #1B122B;
-    color: #F3E5D8;
+    background-color: #1E1A31; /* Dark purple background */
+    color: #FFFFFF; /* Beige text color */
+    line-height: 1.6;
 }
 
 /* Navigation Bar */
-header {
-    position: sticky;
+nav {
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    background: #3A1C56;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.navbar ul {
+    left: 0;
+    width: 100%;
+    background-color: #2A1C3F; /* Deep purple */
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
     list-style: none;
-    padding: 1rem;
 }
 
-.navbar ul li {
-    margin: 0 1.5rem;
+nav ul li {
+    margin: 0 1rem;
 }
 
-.navbar ul li a {
+nav ul li a {
+    color: #FF6F61; /* Coral color */
     text-decoration: none;
-    color: #F3E5D8;
+    font-size: 1.1rem;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.navbar ul li a.active,
-.navbar ul li a:hover {
-    color: #FF6F61;
-    transform: scale(1.1);
+nav ul li a:hover,
+nav ul li a.active {
+    color: #FFFFFF; /* Beige on hover or active */
+    text-decoration: underline;
 }
 
-/* Sections */
+/* Section General Styles */
 .section {
-    min-height: 100vh;
     padding: 4rem 10%;
+    margin-top: 4rem;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    margin-bottom: 2rem;
     text-align: left;
 }
 
+/* Home Section */
 #home {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 4rem 10%;
-}
-
-.home-content {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    height: 100vh;
 }
 
-.intro h1 {
-    font-size: 3rem;
+#home .intro {
+    flex: 1;
+}
+
+#home h1 {
+    font-size: 3.5rem;
     color: #FF6F61;
+    margin-bottom: 1rem;
 }
 
-.intro p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+#home p {
+    font-size: 1.2rem;
     color: #F3E5D8;
 }
 
-.intro span {
-    color: #FF6F61;
-    font-weight: bold;
+#home .resume-btn {
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
-.profile-pic img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    border: 5px solid #FF6F61;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.resume-btn a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #FF6F61;
+    color: #2A1C3F;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-btn a:hover {
+    background-color: #F3E5D8;
+    color: #2A1C3F;
+    transform: scale(1.05);
+}
+
+#home img {
+    width: 300px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #FF6F61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 2px solid #FF6F61;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: #2A1C3F;
     transition: transform 0.3s ease;
 }
 
-.profile-pic img:hover {
-    transform: scale(1.1);
+.education-entry:hover {
+    transform: translateY(-5px);
 }
 
-/* Download Resume Button */
-.resume-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.download-btn {
-    text-decoration: none;
-    color: #1B122B;
-    background: #FF6F61;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.download-btn:hover {
+.edu-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
     background: #F3E5D8;
-    transform: scale(1.1);
-    color: #3A1C56;
+    padding: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Section Titles */
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.edu-details h3 {
+    font-size: 1.8rem;
+    color: #FF6F61;
+    margin-bottom: 0.5rem;
+}
+
+.edu-details p {
+    font-size: 1.1rem;
+    color: #F3E5D8;
+    margin: 0.2rem 0;
+}
+
+.edu-details strong {
     color: #FF6F61;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .edu-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #home img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
