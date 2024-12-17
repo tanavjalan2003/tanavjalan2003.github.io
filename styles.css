@@ -126,3 +126,61 @@ h2 {
     margin-bottom: 1.5rem;
     color: #FF6F61;
 }
+
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-box {
+    display: flex;
+    align-items: center;
+    background: #2A1A3D;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.education-logo {
+    flex: 0 0 100px; /* Fixed width for logos */
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #FF6F61;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.education-details {
+    flex: 1;
+    color: #F3E5D8;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    color: #FF6F61;
+    margin-bottom: 0.5rem;
+}
+
+.education-details p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+
