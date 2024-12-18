@@ -293,7 +293,7 @@ h2 {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    background-color: #f28500; /* Orange to match the color palette */
+    background-color: #FF6F61; /* Orange to match the color palette */
     border: none;
     border-radius: 5px;
     text-decoration: none; /* Removes underline for links */
@@ -301,7 +301,7 @@ h2 {
 }
 
 .download-btn:hover {
-    background-color: #d47400; /* Darker orange on hover */
+    background-color: #FF4E3A; /* Darker orange on hover */
 }
 
 /* Fade In Up Animation */
