@@ -287,17 +287,21 @@ h2 {
 }
 
 .download-btn {
-    padding: 0.5rem 1rem;
-    background-color: #FF6F61;
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f28500; /* Orange to match the color palette */
     border: none;
     border-radius: 5px;
-    color: white;
-    cursor: pointer;
+    text-decoration: none; /* Removes underline for links */
     transition: background-color 0.3s ease;
 }
 
 .download-btn:hover {
-    background-color: #FF4E3A;
+    background-color: #d47400; /* Darker orange on hover */
 }
 
 /* Fade In Up Animation */
