@@ -304,6 +304,50 @@ h2 {
     background-color: #FF4E3A; /* Darker orange on hover */
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-item {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.project-info h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
 /* Fade In Up Animation */
 @keyframes fadeInUp {
     from {
