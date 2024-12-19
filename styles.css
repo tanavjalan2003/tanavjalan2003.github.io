@@ -316,7 +316,7 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
-    color: #333;
+    color: #F3E5D8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -334,7 +334,7 @@ h2 {
 
 .project-info {
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #2A1A3D;
 }
 
 .project-info h4 {
@@ -345,7 +345,90 @@ h2 {
 .project-info p {
     margin: 0;
     font-size: 14px;
-    color: #555;
+    color: #F3E5D8;
+}
+
+/* Endorsements Section */
+.endorsements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.endorsement-box {
+    display: flex;
+    align-items: center;
+    background: #2A1A3D;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.endorsement-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.endorsement-logo {
+    flex: 0 0 100px; /* Fixed width for images */
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endorsement-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #FF6F61;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.endorsement-details {
+    flex: 1;
+    color: #F3E5D8;
+}
+
+.endorsement-details h3 {
+    font-size: 1.5rem;
+    color: #FF6F61;
+    margin-bottom: 0.5rem;
+}
+
+.endorsement-details p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+/* Add transition and hidden state */
+.hidden {
+    display: none;
+}
+
+.recommendation-text {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.recommendation-text.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+.recommendation-text {
+    max-height: 275px;
+    opacity: 1;
+}
+
+/* Subheading Style */
+.subheading {
+    font-size: 1.2rem; /* Smaller than main heading */
+    color: #F3E5D8; /* Match the theme */
+    margin-bottom: 1rem; /* Add some space below the subheading */
+    text-align: left; /* Align it with the other text */
 }
 
 /* Fade In Up Animation */
