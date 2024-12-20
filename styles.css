@@ -104,20 +104,21 @@ header {
 }
 
 .download-btn {
-    text-decoration: none;
-    color: #1B122B;
-    background: #FF6F61;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    font-size: 1rem;
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 14px;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    background-color: #FF6F61; /* Orange to match the color palette */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline for links */
+    transition: background-color 0.3s ease;
 }
 
 .download-btn:hover {
-    background: #F3E5D8;
-    transform: scale(1.1);
-    color: #3A1C56;
+    background-color: #FF4E3A; /* Darker orange on hover */
 }
 
 /* Section Titles */
@@ -423,12 +424,84 @@ h2 {
     opacity: 1;
 }
 
-/* Subheading Style */
-.subheading {
-    font-size: 1.2rem; /* Smaller than main heading */
-    color: #F3E5D8; /* Match the theme */
-    margin-bottom: 1rem; /* Add some space below the subheading */
-    text-align: left; /* Align it with the other text */
+/* Timeline Section */
+.experience-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #FF6F61;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Containers */
+.experience-container {
+    position: relative;
+    width: 50%;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Left Container Styling */
+.left-container {
+    float: left;
+    text-align: left;
+    clear: both; /* Ensures the next left container starts after the previous right container */
+    margin-bottom: 60px; /* Space between entries */
+}
+
+.left-container img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: -30px;
+    top: 32px;
+    z-index: 10;
+}
+
+/* Right Container Styling */
+.right-container {
+    float: right;
+    text-align: left;
+    clear: both; /* Ensures the next right container starts after the previous left container */
+    margin-bottom: 60px; /* Space between entries */
+}
+
+.right-container img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: -30px;
+    top: 32px;
+    z-index: 10;
+}
+
+/* Textbox Styling */
+.experience-textbox {
+    padding: 20px 30px;
+    background: #3A1C56;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Clearfix for Timeline */
+.experience-timeline::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Fade In Up Animation */
