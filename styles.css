@@ -1,0 +1,537 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 80px; /* Explicitly set the height */
+}
+
+.nav-toggle {
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px;
+    z-index: 1100;
+}
+
+.nav-ribbon {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 100%;
+    display: none;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #D4AF37;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.nav-ribbon.open {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.nav-ribbon ul {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-ribbon ul li {
+    margin: 0;
+}
+
+.nav-ribbon ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 0.3s;
+    font-family: Papyrus, fantasy;
+}
+
+.nav-ribbon ul li a:hover {
+    background-color: #D4AF37;
+    color: #fff;
+}
+
+/* Highlighted nav link */
+.nav-ribbon ul li a.active {
+    background-color: #D4AF37;
+    color: #fff;
+}
+
+/* Add styles to position the logo */
+.navbar-logo {
+    position: absolute;
+    top: 15px;
+    right: 20px; /* Adjust the right margin as needed */
+    height: 90px; /* Set the height of the logo */
+    z-index: 1001;
+}
+
+.navbar-logo img {
+    height: 100%; /* Make sure the logo fits within the defined height */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    margin-top: 20px;
+}
+
+.banner h1 {
+    margin: 20px;
+    color: #D4AF37;
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.banner p {
+    margin: 0;
+    color: #D4AF37;
+    font-family: Courier, monospace;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-photo {
+    border: 2px solid #D4AF37;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.intro {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #D4AF37;
+    padding: 20px;
+    border-radius: 15px;
+    width: 60%;
+    color: #D4AF37;
+    font-family: "Times New Roman", serif;
+    box-shadow: 0 0 10px #D4AF37;
+    font-size: 19px;
+}
+
+/* Education Section */
+.education-title {
+    text-align: center;
+    color: #D4AF37;
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    padding-top: 150px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.education-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if screen is too narrow */
+    justify-content: space-between; /* Add space between items */
+    gap: 20px; /* Adjusts spacing between the boxes */
+    padding: 5px 10px;
+}
+
+.education-box {
+    flex: 1 1 calc(50% - 40px); /* Make each box take 50% width with spacing */
+    max-width: calc(50% - 40px); /* Ensures max-width aligns with flex calculation */
+    display: flex;
+    align-items: center;
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #D4AF37;
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+.education-logo {
+    width: 80px; /* Reduced size */
+    height: 80px; /* Reduced size */
+    margin-right: 15px;
+}
+
+.education-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.education-text h3 {
+    margin: 0;
+    font-size: 28px; /* Adjusted font size */
+    font-family: 'Times New Roman', serif;
+}
+
+.education-text p {
+    font-size: 18px; /* Adjusted font size */
+    font-family: 'Times New Roman', serif;
+}
+
+canvas {
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    animation: fillCircle 2s linear infinite;
+    width: 80px; /* Adjusted canvas size */
+    height: 80px; /* Adjusted canvas size */
+}
+
+.gpa-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the canvas and text */
+    justify-content: center; /* Center content within the container */
+    gap: 5px; /* Add spacing between canvas and text */
+    margin-left: auto; /* Ensure alignment matches both boxes */
+    margin-right: auto;
+    width: 20%; /* Ensure it takes up equal width */
+}
+
+.gpa-container p {
+    margin: 0;
+    text-align: center; /* Ensure consistent text alignment */
+    font-size: 16px; /* Consistent font size */
+    color: #D4AF37; /* Match the design color */
+}
+
+.degree {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 8px; /* Space between the icon and the text */
+}
+
+.degree-icon {
+    width: 60px; /* Adjust size of the graduation cap image */
+    height: 50px; /* Adjust size of the graduation cap image */
+    vertical-align: middle; /* Align with the text */
+}
+
+/* For smaller screens, stack boxes vertically */
+@media (max-width: 768px) {
+    .education-box {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
+
+
+    .gpa-container {
+        margin-top: 10px;
+        align-items: center; /* Center alignment on small screens */
+    }
+}
+
+/* Skills Section */
+.skills-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #D4AF37;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #D4AF37;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills-text {
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.slideshow {
+    display: flex;
+    animation: scroll-left 15s linear infinite;
+    align-items: center;
+    gap: 20px; /* Add gap between slides */
+}
+
+.slide {
+    text-align: center;
+    flex-shrink: 0;
+    width: 120px; /* Fixed width to ensure consistency */
+}
+
+.slide img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.slide p {
+    font-size: 14px;
+    color: #D4AF37;
+    margin: 0;
+}
+
+/* Animation for the slideshow */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Experience Section */
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Ensure timeline container can grow */
+    position: relative;
+}
+
+
+/* Updated Timeline Styling */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.timeline-item.left .content-box {
+    transform: translateY(-80%); /* Increased spacing */
+    text-align: left;
+}
+
+.timeline-item.right .content-box {
+    transform: translateY(80%); /* Increased spacing */
+    text-align: left; 
+}
+
+.content-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #D4AF37;
+    border-radius: 10px;
+    padding: 20px;
+    color: #D4AF37;
+    font-family: "Times New Roman", serif;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+    z-index: 2;
+}
+
+.dot {
+    width: 60px; /* Adjust size for logos */
+    height: 60px;
+    background-color: transparent; /* Prepare for logos */
+    border: 5px solid #D4AF37;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #D4AF37;
+    z-index: 1;
+}
+
+.timeline-item.left .dot {
+    right: 50%; /* Centered to the box */
+}
+
+.timeline-item.right .dot {
+    left: 50%; /* Centered to the box */
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #D4AF37;
+    z-index: 0;
+}
+
+/* Logo Styling (Inside Dots) */
+.dot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+/* Keyframes for content animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'Times New Roman', serif;
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+}
+
+.popup-content h2 {
+    margin: 0 0 20px;
+    color: #D4AF37;
+    font-family: 'Times New Roman', serif;
+}
+
+.popup-content p, .popup-content ul {
+    margin: 0 0 20px;
+    color: #D4AF37;
+    font-family: 'Times New Roman', serif;
+}
+
+.popup-content ul {
+    padding-left: 20px;
+}
+  
+.popup-content ul li {
+    margin-bottom: 5px;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #D4AF37;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Times New Roman', serif;
+}
+
+.popup-content button:hover {
+    background: #b08a2d;
+}
+
+/* Section title */
+.skills-title {
+    text-align: center;
+    color: #D4AF37;
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    padding-top: 150px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* Section title */
+.experience-title {
+    text-align: center;
+    color: #D4AF37;
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    padding-top: 150px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
