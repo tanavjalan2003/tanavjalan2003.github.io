@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-toggle" onclick="toggleNav()">☰</div>
+            <div class="nav-ribbon">
+                <ul>
+                    <li><a href="#home" id="link-home">Home</a></li>
+                    <li><a href="#education" id="link-education">Education</a></li>
+                    <li><a href="#experience" id="link-experience">Experience</a></li>
+                    <li><a href="#skills" id="link-skills">Skills</a></li>
+                    <li><a href="#projects" id="link-projects">Projects</a></li>
+                    <li><a href="#certifications" id="link-certifications">Certifications</a></li>
+                    <li><a href="#awards" id="link-awards">Awards</a></li>
+                    <li><a href="#endorsements" id="link-endorsements">Endorsements</a></li>
+                    <li><a href="#contact" id="link-contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Add logo on the right side of navbar -->
+            <div class="navbar-logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+    
+    <section id="home">
+        <div class="main-container">
+            <header class="banner">
+                <h1>Welcome to My Portfolio</h1>
+                <p>“The most dangerous poison is the feeling of achievement. The antidote is to every evening think what can be done better tomorrow.” ~ Ingvar Kamprad (Founder IKEA)</p>
+            </header>
+            <div class="content">
+                <div class="profile-photo">
+                    <img src="images/profile.png" alt="Profile Photo">
+                </div>
+                <div class="intro">
+                    <p>Hi, I'm Tanav Jalan!</p>
+                    <p>I am an organized and dedicated candidate, successful at managing multiple priorities with a positive attitude. 
+                    I have the willingness to take on added responsibilities to meet team goals. 
+                    Currently, I am a Senior at ASU contributing to team success through dedication, detail-oriented, and effective communication. Definitely, motivated to learn, grow, and excel both as a human being and as a professional. 
+                    I am able to work with minimal input to produce engaging, authoritative and error-free work. Finally, I would like to add that I am a hardworking and passionate job seeker with strong organizational skills eager to secure a job.</p>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="education-title">Education</h2>
+    
+        <div class="education-section">
+            <div class="education-box">
+                <div class="education-logo">
+                    <img src="images/asu.png" alt="ASU Logo">
+                </div>
+                <div class="education-text">
+                    <h3>Undergraduate Degree
+                        <img src="images/graduation.png" alt="Graduation Cap" class="degree-icon">
+                    </h3>
+                    <p><strong>Institution Name:</strong> Arizona State University</p>
+                    <p><strong>Major:</strong> Computer Science</p>
+                    <p><strong>Minor:</strong> Mathematics</p>
+                    <p><strong>Graduation:</strong> Expected May 2025</p>
+                </div>
+                <div class="gpa-container">
+                    <canvas id="gpa-chart" width="100" height="100"></canvas>
+                    <p><strong>GPA:</strong> 3.8 / 4.0</p>
+                </div>
+            </div>
+    
+            <div class="education-box">
+                <div class="education-logo">
+                    <img src="images/jirs.png" alt="Institution Logo">
+                </div>
+                <div class="education-text">
+                    <h3>High School Diploma
+                        <img src="images/graduation.png" alt="Graduation Cap" class="degree-icon">
+                    </h3>
+                    <p><strong>Institution Name:</strong> Jain International Residential School</p>
+                    <p><strong>Specialization:</strong> Science Stream</p>
+                    <p><strong>Graduation:</strong> May 2021</p>
+                </div>
+                <div class="gpa-container">
+                    <canvas id="highschool-gpa-chart" width="100" height="100"></canvas>
+                    <p><strong>GPA:</strong> 3.6 / 4.0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="experience-title">Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left" onclick="openPopup('popup1')">
+                    <div class="dot">
+                        <img src="images/nasa.png" alt="NASA Logo">
+                    </div>
+                    <div class="content-box">
+                        <h3>AR /VR Developer Intern</h3>
+                        <p>Duration: August 2024 - Present</p>
+                    </div>
+                </div>
+                <!-- Popup 1 -->
+                <div id="popup1" class="popup">
+                    <div class="popup-content">
+                        <h2>The National Aeronautics and Space Administration (NASA)</h2>
+                        <h2>AR/VR Developer Intern</h2>
+                        <p><strong>Duration:</strong> August 2024 - Present</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Developed a 3D simulation of the Psyche asteroid for educational outreach.</li>
+                            <li>Integrated AR/VR interfaces to simulate surface conditions.</li>
+                            <li>Enhanced engagement by 30% through real-time visualization tools.</li>
+                        </ul>
+                        <a href="docs/nasa-offer_letter.pdf" download="nasa-offer_letter"><button>Employment Offer</button>
+                        </a>
+                        <button onclick="closePopup('popup1')">Close</button>
+                    </div>
+                </div>
+    
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right" onclick="openPopup('popup2')">
+                    <div class="dot">
+                        <img src="images/cohnreznick.png" alt="CohnReznick">
+                    </div>
+                    <div class="content-box">
+                        <h3>Full Stack Developer Intern</h3>
+                        <p>Duration: January 2025 - Present</p>
+                    </div>
+                </div>
+                <!-- Popup 2 -->
+                <div id="popup2" class="popup">
+                    <div class="popup-content">
+                        <h2>CohnReznick LLP</h2>
+                        <h2>Full Stack Developer Intern</h2>
+                        <p><strong>Duration:</strong> January 2025 - Present</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Designing, coding, and implementing 5+ new software features using .NET, ensuring scalable and efficient solutions.</li>
+                            <li>Utilizing Dependency Injection in 3 core modules, improving code modularity and reducing technical debt by 20%.</li>
+                            <li>Developing and integrating 4+ RESTful APIs, enabling seamless communication between front-end and back-end systems, with deployment on Azure for enhanced scalability.</li>
+                        </ul>
+                        <a href="docs/cohnreznick-offer_letter-spring25..pdf" download="cohnreznick-offer_letter-spring25"><button>Employment Offer</button>
+                        </a>
+                        <button onclick="closePopup('popup2')">Close</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left" onclick="openPopup('popup3')">
+                    <div class="dot">
+                        <img src="images/cohnreznick.png" alt="CohnReznick">
+                    </div>
+                    <div class="content-box">
+                        <h3>Data Analyst Intern</h3>
+                        <p>Duration: September - December 2024</p>
+                    </div>
+                </div>
+                <!-- Popup 3 -->
+                <div id="popup3" class="popup">
+                    <div class="popup-content">
+                        <h2>CohnReznick LLP</h2>
+                        <h2>Data Analyst Intern</h2>
+                        <p><strong>Duration:</strong> September - December 2024</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Built Power BI dashboards using DAX and SQL, delivering actionable insights and reducing reporting time by 30%.</li>
+                            <li>Extracted, transformed, and analyzed datasets with SQL, ensuring accuracy and efficiency in data workflows.</li>
+                            <li>Integrated Power BI with Microsoft Fabric, enhancing data consistency and streamlining processing times.</li>
+                        <a href="docs/cohnreznick-offer_letter-fall24.pdf" download="cohnreznick-offer_letter-fall24"><button>Employment Offer</button>
+                        </a>
+                        <button onclick="closePopup('popup3')">Close</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item right" onclick="openPopup('popup4')">
+                    <div class="dot">
+                        <img src="images/verizon.png" alt="ASU">
+                    </div>
+                    <div class="content-box">
+                        <h3>Cloud Computing Engineer Intern</h3>
+                        <p>Duration: April - May 2024</p>
+                    </div>
+                </div>
+                <!-- Popup 4 -->
+                <div id="popup4" class="popup">
+                    <div class="popup-content">
+                        <h2>Verizon</h2>
+                        <h2>Cloud Computing Engineer Intern</h2>
+                        <p><strong>Duration:</strong> April - May 2024</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Assembled a VPN product 'Sasha' for Verizon’s Cloud Computing team</li>
+                            <li>Focused on cloud-native traitssuch asredundancy,resiliency, and least-privilege using command line Python fortesting.</li>
+                            <li>Researched 4 advanced methodsfor application security, enhancing the VPN'srobustness against potential threats.</li>
+                            <li>Showcased a detailed presentation with key insights and strategic proposals, captivating and securing new clientele.</li>
+                        <a href="docs/verizon-completion.pdf" download="verizon-completion"><button>Certificate of Professional Excellence</button>
+                        </a>
+                        <button onclick="closePopup('popup4')">Close</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item left" onclick="openPopup('popup5')">
+                    <div class="dot">
+                        <img src="images/nexus.png" alt="nexus">
+                    </div>
+                    <div class="content-box">
+                        <h3>Web Developer Intern</h3>
+                        <p>Duration: December 2023 - March 2024</p>
+                    </div>
+                </div>
+                <!-- Popup 5 -->
+                <div id="popup5" class="popup">
+                    <div class="popup-content">
+                        <h2>Nexus Info</h2>
+                        <h2>Web Developer Intern</h2>
+                        <p><strong>Duration:</strong> December 2023 - March 2024</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Boosted deployment speed by 40% using Jenkins and reduced cloud app load times from 4 seconds to 1.5 seconds.</li>
+                            <li>Streamlined full-stack debugging by 30% within MVC architecture, enhancing development efficiency.</li>
+                            <li>Led 6 AI and software development projects, leveraging tools like GPT and BARD AI for innovation and growth.</li>
+                        <a href="docs/nexus-completion.pdf" download="nexus-completion"><button>Certificate of Professional Excellence</button>
+                        </a>
+                        <button onclick="closePopup('popup5')">Close</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item right" onclick="openPopup('popup6')">
+                    <div class="dot">
+                        <img src="images/kpmg.png" alt="kpmg">
+                    </div>
+                    <div class="content-box">
+                        <h3>Data Automation Specialist Intern</h3>
+                        <p>Duration: June - August 2023</p>
+                    </div>
+                </div>
+                <!-- Popup 6 -->
+                <div id="popup6" class="popup">
+                    <div class="popup-content">
+                        <h2>KPMG</h2>
+                        <h2>Data Automation Specialist Intern</h2>
+                        <p><strong>Duration:</strong> June - August 2023</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Transformed and structured 1TB ofraw data, ensuring seamless data flow and 99% consistency.</li>
+                            <li>Automated data extraction using 'Pandas' and 'openpyxl',reducing manual effort by 80% and revising accuracy by 94%.</li>
+                            <li>Devised dynamic algorithms automating 95% of tasks, ensuring real-time updates, and refining data presentation.</li>
+                        <a href="docs/kpmg-completion.pdf" download="kpmg-completion"><button>Certificate of Professional Excellence</button>
+                        </a>
+                        <button onclick="closePopup('popup6')">Close</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item left" onclick="openPopup('popup7')">
+                    <div class="dot">
+                        <img src="images/techmahindra.png" alt="techmahindra">
+                    </div>
+                    <div class="content-box">
+                        <h3>Blockchain Developer Intern</h3>
+                        <p>Duration: June - August 2023</p>
+                    </div>
+                </div>
+                <!-- Popup 7 -->
+                <div id="popup7" class="popup">
+                    <div class="popup-content">
+                        <h2>Tech Mahindra</h2>
+                        <h2>Blockchain Developer Intern</h2>
+                        <p><strong>Duration:</strong> June - August 2023</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>Integrated DApps with front-end interfaces, conducted 45+ tests, and implemented cryptographic algorithmsto ensure maximum reliability.</li>
+                            <li>Revamped 40% security by researching and implementing solutionsto protect blockchain platformsfrom vulnerabilities.</li>
+                            <li>Engineered and executed over 20 smart contracts using Solidity on the Ethereum platform.</li>
+                        <a href="docs/techmahindra-completion.pdf" download="techmahindra-completion"><button>Certificate of Professional Excellence</button>
+                        </a>
+                        <button onclick="closePopup('popup7')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                                  
+    <section id="skills">
+        <h2 class="skills-title">Skills</h2>
+    
+        <div class="skills-box">
+            <div class="skills-text">
+                <h3>Programming Languages</h3>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="images/python.png" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/sql.png" alt="Sql">
+                        <p>SQL</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/c-.png" alt="C++">
+                        <p>C++</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/java.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/matlab.png" alt="MatLab">
+                        <p>MatLab</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/html.png" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/css.png" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="skills-box">
+            <div class="skills-text">
+                <h3>Cloud Platforms & Operating Systems</h3>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="images/aws.png" alt="AWS">
+                        <p>AWS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/azure.png" alt="Azure">
+                        <p>Azure</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/google_cloud.png" alt="Google">
+                        <p>Google Cloud</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/devops.png" alt="DevOps">
+                        <p>DevOps</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/linux.png" alt="Linux">
+                        <p>Linux</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/mac.png" alt="MacOS">
+                        <p>MacOS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/github.png" alt="GitHub">
+                        <p>GitHub</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/microsoft.png" alt="Microsoft">
+                        <p>Microsoft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-text">
+                <h3>Development Tools</h3>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="images/reactjs.png" alt="React Js">
+                        <p>React Js</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/nodejs.png" alt="Node Js">
+                        <p>Node Js</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/swiftui.png" alt="Swift UI">
+                        <p>Swift UI</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/blender.png" alt="Blender">
+                        <p>Blender</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/firebase.png" alt="Firebase">
+                        <p>Firebase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="projects-title">Projects</h2>
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <a href="https://github.com/tanavjalan2003/tanavjalan2003.github.io" target="_blank">
+                    <img src="images/portfolio.png" alt="Project 1 Image">
+                    <div class="card-text">
+                        <h3>Portfolio website</h3>
+                        <p>The current website</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <a href="https://psyche.asu.edu/" target="_blank">
+                    <img src="images/psyche.png" alt="Project 2 Image">
+                    <div class="card-text">
+                        <h3>Nasa's Psyche Mission</h3>
+                        <p>A brief description of project 2...</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <a href="https://github.com/tanavjalan2003/Pygame-Flappy-Bird-TJ" target="_blank">
+                    <img src="images/flappybird.png" alt="Project 3 Image">
+                    <div class="card-text">
+                        <h3>Flappy Bird</h3>
+                        <p>A brief description of project 3...</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Additional Project Cards -->
+            <div class="project-card">
+                <a href="https://github.com/tanavjalan2003/school-management-system-python-mysql" target="_blank">
+                    <img src="images/school.png" alt="Project 4 Image">
+                    <div class="card-text">
+                        <h3>School Management System</h3>
+                        <p>Made using Python & MySQL</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://github.com/tanavjalan2003/Task_Managing_System_using_php_postgresql" target="_blank">
+                    <img src="images/task.png" alt="Project 5 Image">
+                    <div class="card-text">
+                        <h3>Task Management System</h3>
+                        <p>Made using Php & PostgreSQL</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://github.com/tanavjalan2003/Race-Car-with-AI-game" target="_blank">
+                    <img src="images/racing.png" alt="Project 6 Image">
+                    <div class="card-text">
+                        <h3>Race Car game with AI</h3>
+                        <p>A brief description of project 6...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="certifications-title">Certifications</h2>
+        <div class="certifications-container">
+            <!-- Certification 1 -->
+            <div class="certification-item">
+                <div class="certification-logo">
+                    <img src="path/to/logo1.png" alt="Institution 1 Logo">
+                </div>
+                <div class="certification-links">
+                    <a href="path/to/certificate1.pdf" target="_blank" class="certification-link">View Certificate</a>
+                </div>
+            </div>
+    
+            <!-- Certification 2 -->
+            <div class="certification-item">
+                <div class="certification-logo">
+                    <img src="path/to/logo2.png" alt="Institution 2 Logo">
+                </div>
+                <div class="certification-links">
+                    <a href="path/to/certificate2.pdf" target="_blank" class="certification-link">View Certificate</a>
+                </div>
+            </div>
+    
+            <!-- Certification 3 -->
+            <div class="certification-item">
+                <div class="certification-logo">
+                    <img src="path/to/logo3.png" alt="Institution 3 Logo">
+                </div>
+                <div class="certification-links">
+                    <a href="path/to/certificate3.pdf" target="_blank" class="certification-link">View Certificate</a>
+                </div>
+            </div>
+    
+            <!-- Add more certifications as needed -->
+        </div>
+    </section>
+                
+    <script>
+        function toggleNav() {
+            const navRibbon = document.querySelector('.nav-ribbon');
+            const navToggle = document.querySelector('.nav-toggle');
+            navRibbon.classList.toggle('open');
+            navToggle.textContent = navRibbon.classList.contains('open') ? '✕' : '☰';
+        }
+    
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Highlight navigation links based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-ribbon ul li a');
+    
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+    
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+    
+            // Update active class on navigation links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    
+        // Open Popup Function
+        function openPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.style.display = "flex";
+            }
+        }
+    
+        // Close Popup Function
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.style.display = "none";
+            }
+        }
+    
+        // View Job Letter Function (Customize as needed)
+        function viewJobLetter(jobId) {
+            alert(`Viewing job letter for ${jobId}`);
+        }
+    
+        // Render pie chart for GPA with animation
+        window.onload = function() {
+            const ctx = document.getElementById('gpa-chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['GPA', 'Remaining'],
+                    datasets: [{
+                        label: 'GPA',
+                        data: [3.8, 0.2], // Example GPA 3.8 out of 4.0
+                        backgroundColor: ['#D4AF37', '#121212'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 2000, // Duration of the animation
+                        loop: true, // Loops the animation indefinitely
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        }
+                    }
+                }
+            });
+    
+            const ctxHS = document.getElementById('highschool-gpa-chart').getContext('2d');
+            new Chart(ctxHS, {
+                type: 'pie',
+                data: {
+                    labels: ['GPA', 'Remaining'],
+                    datasets: [{
+                        label: 'GPA',
+                        data: [3.6, 0.4], // Example GPA 3.6 out of 4.0
+                        backgroundColor: ['#D4AF37', '#121212'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 2000, // Duration of the animation
+                        loop: true, // Loops the animation indefinitely
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
+</body>
+</html>
